@@ -23,7 +23,16 @@ export default function componentName() {
   return (
     <Container>
       <div>
-        <img src="/images/logo(white-desktop).svg" alt="logo" />
+        <img
+          src="/images/logo(white-desktop).svg"
+          alt="logo"
+          className="logo-desktop"
+        />
+        <img
+          src="/images/logo(white-mobile).svg"
+          alt="mobile-logo"
+          className="logo-mobile"
+        />
       </div>
       <nav>
         {pages.map(({ id, link, linkName }) => (
@@ -39,6 +48,16 @@ export default function componentName() {
           Donate
         </button>
       </div>
+      <button className="menu-btn">
+        <span
+          className="material-symbols-outlined"
+          style={{
+            color: colorStyle.onPrimaryColor,
+          }}
+        >
+          drag_handle
+        </span>
+      </button>
     </Container>
   );
 }
@@ -76,11 +95,26 @@ const Container = styled.header`
     rgba(0, 0, 0, 0.4) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+
+  .logo-mobile {
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+
+  .logo-desktop {
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
+  }
   nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
   }
   .header-alt {
     button {
@@ -95,6 +129,21 @@ const Container = styled.header`
       &:hover {
         font-weight: bold;
       }
+    }
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
+  }
+
+  .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: ${colorStyle.onPrimaryColor};
+
+    span,
+    svg {
+      transform: scale(2, 2);
     }
   }
 `;
