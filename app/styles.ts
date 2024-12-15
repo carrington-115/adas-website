@@ -1,6 +1,11 @@
+"use client";
+
 const colorStyle = {
   primaryColor: "#4B0082",
+  primaryContainerColor: "#EDE6F3",
+  onPrimaryContainerColor: "#2D004E",
   backgroundColor: "#FFFFFF",
+  onPrimaryColor: "#ffffff",
 };
 
 const textStyles = {
