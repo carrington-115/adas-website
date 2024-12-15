@@ -1,5 +1,5 @@
 "use client";
-import { HeroComponent } from "@/components";
+import { Header, HeroComponent } from "@/components";
 import styled from "styled-components";
 import { textStyles, colorStyle } from "./styles";
 
@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <Container>
+        <Header />
         <HeroComponent
           image="/images/desktop/home-hero.svg"
           children={
