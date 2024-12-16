@@ -34,7 +34,7 @@ const Container = styled.div`
   z-index: 100;
   background-color: ${colorStyle.onPrimaryColor};
   width: 100vw;
-  height: 88vh;
+  height: 50vh;
   left: 0;
   right: 0;
   bottom: 0;
