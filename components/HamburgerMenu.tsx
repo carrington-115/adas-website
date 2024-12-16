@@ -42,6 +42,10 @@ const Container = styled.div`
   padding: 20px 16px 0px 16px;
   transition: all 0.25s 250ms ease-in;
 
+  @media (min-width: 600px) {
+    display: none;
+  }
+
   section {
     display: flex;
     flex-direction: column;

@@ -157,7 +157,6 @@ const Container = styled.div`
     border-bottom: 1px solid var(--primary-container-color, #ede5f2);
     .content {
       width: 45%;
-
       p {
         text-align: justify;
         font-family: Poppins;
@@ -165,6 +164,9 @@ const Container = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        @media (min-width: 320px) and (max-width: 599px) {
+          font-size: 16px;
+        }
       }
       button {
         display: flex;
@@ -176,9 +178,20 @@ const Container = styled.div`
         background: linear-gradient(180deg, #4b0082 0%, #2d004e 100%);
         margin-top: 20px;
       }
+      @media (min-width: 320px) and (max-width: 599px) {
+        width: 90%;
+      }
     }
     .image {
       width: 45%;
+      @media (min-width: 320px) and (max-width: 599px) {
+        width: 90%;
+        margin-top: 20px;
+      }
+    }
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: flex;
+      flex-direction: column;
     }
   }
 `;
