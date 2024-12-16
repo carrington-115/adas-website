@@ -1,4 +1,4 @@
-"u";
+"use client";
 
 import { colorStyle } from "@/app/styles";
 import { pages } from "@/contants";
