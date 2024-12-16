@@ -1,4 +1,5 @@
 "use client";
+
 import { colorStyle, textStyles } from "@/styles";
 import React from "react";
 import styled from "styled-components";

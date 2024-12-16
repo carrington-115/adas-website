@@ -1,5 +1,3 @@
-"use client";
-
 interface linkElementType {
   id: number;
   link: string;

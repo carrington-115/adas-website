@@ -12,12 +12,11 @@ export default function componentName() {
   const [scrollPos, setScrollPos] = useState<number>(0);
   const [scrolling, setScrolling] = useState<boolean>(false);
 
-  const handleScroll = () => {
-    setScrollPos(window.scrollY);
-    setScrolling(scrollPos > 300);
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      setScrollPos(window.scrollY);
+      setScrolling(scrollPos > 300);
+    };
     if (typeof window !== undefined) {
       handleScroll();
     }
