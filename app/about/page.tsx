@@ -28,7 +28,6 @@ export default function componentName() {
         <Story />
         <Mission />
         <Values />
-
         <ImpactAnalysis />
         <Impact />
         <Change />
