@@ -1,0 +1,22 @@
+<svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="school" filter="url(#filter0_d_38_1667)">
+<mask id="mask0_38_1667" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="101" height="100">
+<rect id="Bounding box" x="0.5" width="100" height="100" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_38_1667)">
+<path id="school_2" d="M88.0001 70.8333V42.0833L50.5001 62.5L4.66675 37.5L50.5001 12.5L96.3334 37.5V70.8333H88.0001ZM50.5001 87.5L21.3334 71.6667V50.8333L50.5001 66.6667L79.6667 50.8333V71.6667L50.5001 87.5Z" fill="#4B0082"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_38_1667" x="0.666748" y="12.5" width="99.6667" height="83" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_38_1667"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_38_1667" result="shape"/>
+</filter>
+</defs>
+</svg>

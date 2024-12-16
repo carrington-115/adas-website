@@ -130,11 +130,11 @@ const Container = styled.header`
       justify-content: center;
       align-items: center;
       gap: 10px;
-      background-color: ${colorStyle.primaryContainerColor};
+      background-color: rgba(237, 229, 242, 0.7);
       color: ${colorStyle.onPrimaryContainerColor};
       border-radius: 100px;
       &:hover {
-        font-weight: bold;
+        background-color: rgba(237, 229, 242, 1);
       }
     }
     @media (min-width: 320px) and (max-width: 599px) {

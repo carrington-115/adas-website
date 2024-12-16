@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Header, HeroComponent } from "@/components";
+import { Header, HeroComponent, Impact } from "@/components";
 import styled from "styled-components";
 import { textStyles, colorStyle } from "./styles";
 
@@ -90,6 +90,7 @@ export default function Home() {
             <img src="/images/desktop/who-we-are.png" alt="who we are" />
           </div>
         </section>
+        <Impact />
       </Container>
     </>
   );
