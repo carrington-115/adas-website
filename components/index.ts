@@ -8,6 +8,7 @@ import ImpactAnalysis from "./ImpactAnalysis";
 import Change from "./Change";
 import Footer from "./Footer";
 import Header from "./Header";
+import Story from "./Story";
 
 export {
   HeroComponent,
@@ -18,4 +19,5 @@ export {
   ImpactAnalysis,
   Change,
   Footer,
+  Story,
 };
