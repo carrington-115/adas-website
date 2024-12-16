@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colorStyle, textStyles } from "@/app/styles";
 import HeaderLink from "./HeaderLink";
@@ -9,11 +9,26 @@ import { HamburgerMenu } from ".";
 
 export default function componentName() {
   const [menuClicked, setMenuClicked] = useState<boolean>(false);
+  const [scrollPos, setScrollPos] = useState<number>(0);
+  const [scrolling, setScrolling] = useState<boolean>(false);
+
+  const handleScroll = () => {
+    setScrollPos(window.scrollY);
+    setScrolling(scrollPos > 300);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  useEffect(() => {
+    handleScroll();
+  }, [scrollPos, scrolling]);
 
   return (
     <Container
       style={{
         backgroundColor: menuClicked
+          ? colorStyle.onPrimaryColor
+          : scrolling
           ? colorStyle.onPrimaryColor
           : "transparent",
       }}
@@ -21,13 +36,19 @@ export default function componentName() {
       <HamburgerMenu show={!menuClicked} />
       <div>
         <img
-          src={"/images/logo(white-desktop).svg"}
+          src={
+            scrolling
+              ? "/images/logo-blue.png"
+              : "/images/logo(white-desktop).svg"
+          }
           alt="logo"
           className="logo-desktop"
         />
         <img
           src={
             menuClicked
+              ? "/images/mobile-header.svg"
+              : scrolling
               ? "/images/mobile-header.svg"
               : "/images/logo(white-mobile).svg"
           }
@@ -37,7 +58,12 @@ export default function componentName() {
       </div>
       <nav>
         {pages.map(({ id, link, linkName }) => (
-          <HeaderLink key={id} link={link} linkName={linkName} />
+          <HeaderLink
+            key={id}
+            link={link}
+            linkName={linkName}
+            scrolled={scrolling}
+          />
         ))}
       </nav>
       <div className="header-alt">
@@ -50,8 +76,14 @@ export default function componentName() {
         </button>
       </div>
       <button onClick={() => setMenuClicked(!menuClicked)} className="menu-btn">
-        <span className={menuClicked ? "top-clicked" : `top`} />
-        <span className={menuClicked ? "bottom-clicked" : `bottom`} />
+        <span
+          style={{ backgroundColor: scrolling ? colorStyle.primaryColor : "" }}
+          className={menuClicked ? "top-clicked" : `top`}
+        />
+        <span
+          style={{ backgroundColor: scrolling ? colorStyle.primaryColor : "" }}
+          className={menuClicked ? "bottom-clicked" : `bottom`}
+        />
       </button>
     </Container>
   );

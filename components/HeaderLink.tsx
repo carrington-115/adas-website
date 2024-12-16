@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { colorStyle, textStyles } from "@/app/styles";
+import { useState } from "react";
 
 const HeaderLink = ({
   link,
@@ -13,15 +14,16 @@ const HeaderLink = ({
   linkName: string;
   scrolled?: boolean;
 }) => {
+  const [desktopSize, setDesktopSize] = useState<boolean>(
+    window.innerWidth > 600
+  );
+
   return (
     <>
       <LinkElement
         href={link}
         style={{
           color: scrolled ? colorStyle.primaryColor : colorStyle.onPrimaryColor,
-          ...(scrolled
-            ? textStyles.medium.titleBold
-            : textStyles.regular.bodyBold),
         }}
       >
         {linkName}
@@ -39,4 +41,14 @@ const LinkElement = styled(Link)`
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @media (min-width: 320px) and (max-width: 599px) {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 `;

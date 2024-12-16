@@ -154,6 +154,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-around;
     padding: 40px 0px;
+    border-bottom: 1px solid var(--primary-container-color, #ede5f2);
     .content {
       width: 45%;
 
