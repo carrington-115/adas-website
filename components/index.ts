@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Story from "./Story";
 import Mission from "./Mission";
+import Values from "./Values";
 
 export {
   HeroComponent,
@@ -22,4 +23,5 @@ export {
   Footer,
   Story,
   Mission,
+  Values,
 };

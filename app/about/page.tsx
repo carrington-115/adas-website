@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Change,
   HeroComponent,
@@ -6,6 +7,7 @@ import {
   ImpactAnalysis,
   Mission,
   Story,
+  Values,
 } from "@/components";
 import React from "react";
 import styled from "styled-components";
@@ -25,6 +27,8 @@ export default function componentName() {
         />
         <Story />
         <Mission />
+        <Values />
+
         <ImpactAnalysis />
         <Impact />
         <Change />

@@ -26,7 +26,7 @@ const elements: elementType[] = [
 export default function componentName() {
   return (
     <Container>
-      <h1 style={{ ...textStyles.bold.displayBold }}>Our Mission and Vision</h1>
+      <h1 style={{ ...textStyles.bold.displayBold }}>Our Mission & Vision</h1>
       <div className="inner-container">
         {elements.map(({ title, body, id }) => (
           <MissionElement title={title} body={body} id={id} key={id} />
