@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Header, HeroComponent, Impact } from "@/components";
+import { Header, HeroComponent, Impact, ImpactAnalysis } from "@/components";
 import styled from "styled-components";
 import { textStyles, colorStyle } from "./styles";
 
@@ -91,6 +91,7 @@ export default function Home() {
           </div>
         </section>
         <Impact />
+        <ImpactAnalysis />
       </Container>
     </>
   );

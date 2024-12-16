@@ -120,6 +120,9 @@ const Container = styled.section`
     line-height: normal;
     background-color: ${colorStyle.primaryColor};
     color: ${colorStyle.onPrimaryColor};
+    &:hover {
+      background: linear-gradient(180deg, #4b0082 0%, #2d004e 100%);
+    }
   }
 `;
 
