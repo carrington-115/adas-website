@@ -1,6 +1,6 @@
 "use client";
 
-import { colorStyle, textStyles } from "@/app/styles";
+import { colorStyle, textStyles } from "@/styles";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";

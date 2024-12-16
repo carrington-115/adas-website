@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Link from "next/link";
-import { colorStyle } from "@/app/styles";
+import { colorStyle } from "@/styles";
 import { useState } from "react";
 
 const HeaderLink = ({

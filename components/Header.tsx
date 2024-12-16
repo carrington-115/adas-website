@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { colorStyle, textStyles } from "@/app/styles";
+import { colorStyle, textStyles } from "@/styles";
 import HeaderLink from "./HeaderLink";
 import { pages } from "@/contants";
 import { HamburgerMenu } from ".";

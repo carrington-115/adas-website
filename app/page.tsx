@@ -9,7 +9,7 @@ import {
   ImpactAnalysis,
 } from "@/components";
 import styled from "styled-components";
-import { textStyles, colorStyle } from "./styles";
+import { textStyles, colorStyle } from "../styles";
 
 export default function Home() {
   return (
