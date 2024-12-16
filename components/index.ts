@@ -7,10 +7,7 @@ import Impact from "./Impact";
 import ImpactAnalysis from "./ImpactAnalysis";
 import Change from "./Change";
 import Footer from "./Footer";
-
-import dynamic from "next/dynamic";
-
-const Header = dynamic(() => import("./Header"), { ssr: false });
+import Header from "./Header";
 
 export {
   HeroComponent,
