@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Link from "next/link";
-import { colorStyle, textStyles } from "@/app/styles";
+import { colorStyle } from "@/app/styles";
 import { useState } from "react";
 
 const HeaderLink = ({
@@ -14,10 +14,6 @@ const HeaderLink = ({
   linkName: string;
   scrolled?: boolean;
 }) => {
-  const [desktopSize, setDesktopSize] = useState<boolean>(
-    window.innerWidth > 600
-  );
-
   return (
     <>
       <LinkElement

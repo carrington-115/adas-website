@@ -12,8 +12,6 @@ import styled from "styled-components";
 import { textStyles, colorStyle } from "./styles";
 
 export default function Home() {
-  // const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 599);
-
   return (
     <>
       <Header />
