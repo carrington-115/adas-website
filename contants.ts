@@ -1,3 +1,5 @@
+"use client";
+
 import { linkElementType } from "./@globaltypes";
 
 const pages: linkElementType[] = [
