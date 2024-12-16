@@ -12,16 +12,16 @@ export default function componentName() {
   const [scrollPos, setScrollPos] = useState<number>(0);
   const [scrolling, setScrolling] = useState<boolean>(false);
 
-  const handleScroll = () => {
-    setScrollPos(window.scrollY);
-    setScrolling(scrollPos > 300);
-  };
+  // const handleScroll = () => {
+  //   setScrollPos(window.scrollY);
+  //   setScrolling(scrollPos > 300);
+  // };
 
-  window.addEventListener("scroll", handleScroll);
+  // window.addEventListener("scroll", handleScroll);
 
-  useEffect(() => {
-    handleScroll();
-  }, [scrollPos, scrolling]);
+  // useEffect(() => {
+  //   handleScroll();
+  // }, [scrollPos, scrolling]);
 
   return (
     <Container
