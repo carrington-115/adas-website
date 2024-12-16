@@ -1,35 +1,36 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Link from "next/link";
 import { colorStyle, textStyles } from "@/app/styles";
-
-interface linkElementType {
-  id: number;
-  link: string;
-  linkName: string;
-}
-const pages: linkElementType[] = [
-  { id: 1, link: "/", linkName: "Home" },
-  { id: 2, link: "/about", linkName: "About us" },
-  { id: 3, link: "/programmes", linkName: "Programmes" },
-  { id: 4, link: "/impact", linkName: "Impact" },
-  { id: 5, link: "/get-involved", linkName: "Get involved" },
-  { id: 6, link: "/contact", linkName: "Contact us" },
-];
+import HeaderLink from "./HeaderLink";
+import { pages } from "@/contants";
+import { HamburgerMenu } from ".";
 
 export default function componentName() {
+  const [menuClicked, setMenuClicked] = useState<boolean>(false);
+
   return (
-    <Container>
+    <Container
+      style={{
+        backgroundColor: menuClicked
+          ? colorStyle.onPrimaryColor
+          : "transparent",
+      }}
+    >
+      <HamburgerMenu show={!menuClicked} />
       <div>
         <img
-          src="/images/logo(white-desktop).svg"
+          src={"/images/logo(white-desktop).svg"}
           alt="logo"
           className="logo-desktop"
         />
         <img
-          src="/images/logo(white-mobile).svg"
+          src={
+            menuClicked
+              ? "/images/mobile-header.svg"
+              : "/images/logo(white-mobile).svg"
+          }
           alt="mobile-logo"
           className="logo-mobile"
         />
@@ -48,35 +49,13 @@ export default function componentName() {
           Donate
         </button>
       </div>
-      <button className="menu-btn">
-        <span
-          className="material-symbols-outlined"
-          style={{
-            color: colorStyle.onPrimaryColor,
-          }}
-        >
-          drag_handle
-        </span>
+      <button onClick={() => setMenuClicked(!menuClicked)} className="menu-btn">
+        <span className={menuClicked ? "top-clicked" : `top`} />
+        <span className={menuClicked ? "bottom-clicked" : `bottom`} />
       </button>
     </Container>
   );
 }
-
-const HeaderLink = ({ link, linkName }: { link: string; linkName: string }) => {
-  return (
-    <>
-      <LinkElement
-        href={link}
-        style={{
-          color: colorStyle.onPrimaryColor,
-          ...textStyles.regular.bodyBold,
-        }}
-      >
-        {linkName}
-      </LinkElement>
-    </>
-  );
-};
 
 const Container = styled.header`
   display: flex;
@@ -90,15 +69,11 @@ const Container = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
 
   .logo-mobile {
     @media (min-width: 600px) {
       display: none;
+      transition: all 1s 250s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
 
@@ -137,22 +112,35 @@ const Container = styled.header`
 
   .menu-btn {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     fill: ${colorStyle.onPrimaryColor};
+    padding: 20px 15px;
+    gap: 10px;
+    outline: none;
+    transition: all 1s 250s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    span,
-    svg {
-      transform: scale(2, 2);
+    .top,
+    .bottom,
+    .top-clicked,
+    .bottom-clicked {
+      width: 48px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .top-clicked,
+    .bottom-clicked {
+      background-color: ${colorStyle.primaryColor};
+      transform: rotate(0deg);
+      transition: all 1s 0.01s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .top-clicked {
+      transform: rotate(45deg);
+    }
+    .bottom-clicked {
+      transform: rotate(-45deg);
     }
   }
-`;
-
-const LinkElement = styled(Link)`
-  display: flex;
-  padding: 2.5px 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
 `;
