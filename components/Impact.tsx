@@ -109,6 +109,7 @@ const Container = styled.section`
     line-height: normal;
     @media (min-width: 320px) and (max-width: 599px) {
       font-size: 36px;
+      text-align: center;
     }
   }
   button {
@@ -122,6 +123,10 @@ const Container = styled.section`
     color: ${colorStyle.onPrimaryColor};
     &:hover {
       background: linear-gradient(180deg, #4b0082 0%, #2d004e 100%);
+    }
+    @media (min-width: 320px) and (max-width: 599px) {
+      padding: 10px 60px;
+      font-size: 20px;
     }
   }
 `;
