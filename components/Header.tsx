@@ -13,10 +13,8 @@ export default function componentName() {
   const [scrolling, setScrolling] = useState<boolean>(false);
 
   const handleScroll = () => {
-    if (typeof window !== undefined) {
-      setScrollPos(window.scrollY);
-      setScrolling(scrollPos > 300);
-    }
+    setScrollPos(window.scrollY);
+    setScrolling(scrollPos > 300);
   };
 
   window.addEventListener("scroll", handleScroll);
