@@ -65,6 +65,11 @@ const Container = styled.section`
     justify-content: space-between;
     width: 70%;
     align-items: flex-start;
+    @media (min-width: 320px) and (max-width: 599px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
   }
 `;
 

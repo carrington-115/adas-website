@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <>
       <Container>
-        <Header />
         <HeroComponent
           image="/images/desktop/home-hero.svg"
           imageMobile="/images/mobile/home-hero.svg"
