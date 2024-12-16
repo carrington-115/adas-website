@@ -1,6 +1,6 @@
 "use client";
 
-import { textStyles } from "@/styles";
+import { colorStyle, textStyles } from "@/styles";
 import React from "react";
 import styled from "styled-components";
 
@@ -38,11 +38,7 @@ export default function componentName() {
 
 function MissionElement({ title, body, id }: elementType) {
   return (
-    <ElementContainer
-      style={{
-        borderRight: id == 1 ? "2px solid var(--outline-color, #999)" : "none",
-      }}
-    >
+    <ElementContainer className={`element_${id}`}>
       <h2 style={{ ...textStyles.bold.headingBold }}>{title}</h2>
       <p style={{ ...textStyles.regular.titleBold }}>{body}</p>
     </ElementContainer>
@@ -59,9 +55,26 @@ const Container = styled.section`
   color: white;
   gap: 50px;
   margin-top: 25px;
+  @media (min-width: 320px) and (max-width: 599px) {
+    padding: 40px 16px;
+  }
+
+  h1 {
+    text-align: center;
+  }
   .inner-container {
     display: flex;
     gap: 50;
+    .element_1 {
+      border-right: 2px solid ${colorStyle.primaryContainerColor};
+      @media (min-width: 320px) and (max-width: 599px) {
+        border-bottom: 2px solid ${colorStyle.primaryContainerColor};
+        border-right: none;
+      }
+    }
+    @media (min-width: 320px) and (max-width: 599px) {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -71,4 +84,7 @@ const ElementContainer = styled.div`
   padding: 0px 50px;
   gap: 5px;
   color: white;
+  @media (min-width: 320px) and (max-width: 599px) {
+    padding: 40px 0px;
+  }
 `;
