@@ -1,5 +1,11 @@
 "use client";
-import { HeroComponent, Story } from "@/components";
+import {
+  Change,
+  HeroComponent,
+  Impact,
+  ImpactAnalysis,
+  Story,
+} from "@/components";
 import React from "react";
 import styled from "styled-components";
 
@@ -17,6 +23,9 @@ export default function componentName() {
           }
         />
         <Story />
+        <ImpactAnalysis />
+        <Impact />
+        <Change />
       </Container>
     </>
   );
