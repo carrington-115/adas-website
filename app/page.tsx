@@ -60,6 +60,36 @@ export default function Home() {
             </div>
           }
         />
+        <section className="who-we-are">
+          <div className="content">
+            <h2
+              style={{
+                color: colorStyle.primaryColor,
+                ...textStyles.bold.headingBold,
+              }}
+            >
+              Who We Are
+            </h2>
+            <p>
+              At ADAS Education, we are committed to empowering communities in
+              Central Africa through education, development, and sustainability.
+              Our mission is to create lasting impact by facilitating access to
+              global learning opportunities, supporting community-driven climate
+              action, and nurturing local talent. With a focus on underserved
+              regions, we work hand-in-hand with communities to build a
+              brighter, more sustainable future through knowledge-sharing,
+              capacity-building, and innovative partnerships. Together, we
+              transform challenges into opportunities for growth and success.
+            </p>
+            <button>
+              <p>Discover our story</p>
+              <span className="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+          <div className="image">
+            <img src="/images/desktop/who-we-are.png" alt="who we are" />
+          </div>
+        </section>
       </Container>
     </>
   );
@@ -116,6 +146,38 @@ const Container = styled.div`
           color: ${colorStyle.primaryColor};
         }
       }
+    }
+  }
+  .who-we-are {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0px;
+    .content {
+      width: 45%;
+
+      p {
+        text-align: justify;
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      button {
+        display: flex;
+        padding: 10px 30px;
+        align-items: center;
+        gap: 45px;
+        border-radius: 100px;
+        color: white;
+        background: linear-gradient(180deg, #4b0082 0%, #2d004e 100%);
+        margin-top: 20px;
+      }
+    }
+    .image {
+      width: 45%;
     }
   }
 `;

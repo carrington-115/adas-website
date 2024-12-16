@@ -25,7 +25,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/logo(white-mobile).svg" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=drag_handle"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=arrow_forward"
         />
       </head>
 
