@@ -131,6 +131,10 @@ const Container = styled.div`
       align-items: center;
       gap: 80px;
       padding-top: 20px;
+      @media screen {
+        flex-direction: column;
+        gap: 20px;
+      }
       a {
         padding: 10px 40px;
         border-radius: 5px;
