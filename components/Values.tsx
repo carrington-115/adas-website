@@ -60,15 +60,32 @@ const Container = styled.section`
   flex-direction: column;
   padding: 110px 67px;
   gap: 40px;
+  @media (min-width: 320px) and (max-width: 599px) {
+    padding: 50px 0px;
+  }
   .inner-container {
     color: ${colorStyle.onPrimaryContainerColor};
     display: flex;
     justify-content: space-between;
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 0px 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
     .inner-element {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
+      p {
+        @media (min-width: 320px) and (max-width: 599px) {
+          text-align: center;
+        }
+      }
     }
   }
 `;
