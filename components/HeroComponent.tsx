@@ -5,14 +5,21 @@ import styled from "styled-components";
 export default function componentName({
   image,
   children,
+  imageMobile,
 }: {
-  image: string;
+  image?: string;
+  imageMobile?: string;
   children: React.ReactNode;
 }) {
   return (
     <>
       <Container>
-        <img src={image} alt="background-image" />
+        <img src={image} alt="background-image" className="desktop-image" />
+        <img
+          src={imageMobile}
+          alt="background-image"
+          className="mobile-image"
+        />
         <div className="children">{children}</div>
       </Container>
     </>
@@ -45,5 +52,16 @@ const Container = styled.section`
     position: absolute;
     bottom: 71px;
     width: 100%;
+  }
+  .desktop-image {
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
+  }
+
+  .mobile-image {
+    @media (min-width: 600px) {
+      display: none;
+    }
   }
 `;

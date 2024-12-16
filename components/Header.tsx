@@ -142,5 +142,8 @@ const Container = styled.header`
     .bottom-clicked {
       transform: rotate(-45deg);
     }
+    @media (min-width: 600px) {
+      display: none;
+    }
   }
 `;
