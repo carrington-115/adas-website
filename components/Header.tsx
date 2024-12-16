@@ -103,7 +103,9 @@ const Container = styled.header`
   top: 0;
   right: 0;
   left: 0;
-
+  @media (min-width: 320px) and (max-width: 599px) {
+    height: 12vh;
+  }
   .logo-mobile {
     @media (min-width: 600px) {
       display: none;
