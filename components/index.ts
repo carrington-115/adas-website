@@ -7,6 +7,7 @@ import HamburgerMenu from "./HamburgerMenu";
 import Impact from "./Impact";
 import ImpactAnalysis from "./ImpactAnalysis";
 import Change from "./Change";
+import Footer from "./Footer";
 
 export {
   HeroComponent,
@@ -16,4 +17,5 @@ export {
   Impact,
   ImpactAnalysis,
   Change,
+  Footer,
 };
