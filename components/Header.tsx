@@ -17,10 +17,13 @@ export default function componentName() {
     setScrolling(scrollPos > 300);
   };
 
-  window.addEventListener("scroll", handleScroll);
-
   useEffect(() => {
-    handleScroll();
+    if (typeof window !== undefined) {
+      handleScroll();
+    }
+    if (typeof window !== undefined) {
+      window.addEventListener("scroll", handleScroll);
+    }
   }, [scrollPos, scrolling]);
 
   return (
