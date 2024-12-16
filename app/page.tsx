@@ -131,7 +131,7 @@ const Container = styled.div`
       align-items: center;
       gap: 80px;
       padding-top: 20px;
-      @media screen {
+      @media (min-width: 320px) and (max-width: 599px) {
         flex-direction: column;
         gap: 20px;
       }
