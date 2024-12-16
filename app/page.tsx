@@ -14,7 +14,6 @@ import { textStyles, colorStyle } from "../styles";
 export default function Home() {
   return (
     <>
-      <Header />
       <Container>
         <HeroComponent
           image="/images/desktop/home-hero.svg"
@@ -99,7 +98,6 @@ export default function Home() {
         <ImpactAnalysis />
         <Change />
       </Container>
-      <Footer />
     </>
   );
 }
