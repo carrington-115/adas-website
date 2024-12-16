@@ -11,6 +11,7 @@ export default function componentName() {
   const [menuClicked, setMenuClicked] = useState<boolean>(false);
   const [scrollPos, setScrollPos] = useState<number>(0);
   const [scrolling, setScrolling] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +24,10 @@ export default function componentName() {
     if (typeof window !== undefined) {
       window.addEventListener("scroll", handleScroll);
     }
+    setIsClient(true);
   }, [scrollPos, scrolling]);
+
+  if (!isClient) return null;
 
   return (
     <Container

@@ -4,6 +4,7 @@ import {
   HeroComponent,
   Impact,
   ImpactAnalysis,
+  Mission,
   Story,
 } from "@/components";
 import React from "react";
@@ -23,6 +24,7 @@ export default function componentName() {
           }
         />
         <Story />
+        <Mission />
         <ImpactAnalysis />
         <Impact />
         <Change />
@@ -32,6 +34,7 @@ export default function componentName() {
 }
 
 const Container = styled.div`
+  width: 100%;
   .content {
     display: flex;
     flex-direction: column;

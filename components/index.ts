@@ -9,6 +9,7 @@ import Change from "./Change";
 import Footer from "./Footer";
 import Header from "./Header";
 import Story from "./Story";
+import Mission from "./Mission";
 
 export {
   HeroComponent,
@@ -20,4 +21,5 @@ export {
   Change,
   Footer,
   Story,
+  Mission,
 };
