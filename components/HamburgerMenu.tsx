@@ -8,9 +8,10 @@ import HeaderLink from "./HeaderLink";
 
 interface types {
   show: boolean;
+  closeFunction: (value: boolean) => void;
 }
 
-export default function componentName({ show }: types) {
+export default function componentName({ show, closeFunction }: types) {
   return (
     <Container
       style={{ transform: show ? "translateX(100%)" : "translatex(0%)" }}
@@ -22,6 +23,7 @@ export default function componentName({ show }: types) {
             key={id}
             link={link}
             linkName={linkName}
+            action={() => closeFunction(false)}
           />
         ))}
       </section>

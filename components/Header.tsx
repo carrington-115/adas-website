@@ -35,7 +35,7 @@ export default function componentName() {
           : "transparent",
       }}
     >
-      <HamburgerMenu show={!menuClicked} />
+      <HamburgerMenu closeFunction={setMenuClicked} show={!menuClicked} />
       <div>
         <img
           src={

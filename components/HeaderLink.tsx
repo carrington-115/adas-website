@@ -9,10 +9,12 @@ const HeaderLink = ({
   link,
   linkName,
   scrolled,
+  action,
 }: {
   link: string;
   linkName: string;
   scrolled?: boolean;
+  action?: () => void;
 }) => {
   return (
     <>
@@ -21,6 +23,7 @@ const HeaderLink = ({
         style={{
           color: scrolled ? colorStyle.primaryColor : colorStyle.onPrimaryColor,
         }}
+        onClick={action}
       >
         {linkName}
       </LinkElement>
